@@ -1,0 +1,28 @@
+{
+  "name": "chatwork-coloring-speaker",
+
+  "version": "1.0.0",
+
+  "manifest_version": 2,
+
+  "description": "This colors chats you spoke.",
+
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+
+  "permissions": [
+    "tabs",
+    "https://www.chatwork.com/*"
+  ],
+
+  "content_scripts": [{
+    "matches": ["https://www.chatwork.com/*"],
+    "js": [
+      "content.js"
+    ]
+    }]
+}
